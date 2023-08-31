@@ -1,9 +1,6 @@
 package task02;
 
 import java.util.Scanner;
-
-import task01.InvalidNumberException;
-
 public class Task2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,11 +13,11 @@ public class Task2 {
         try {
 
             if (num2 == 0) {
-                throw new InvalidNumberException("Деление на ноль недопустимо");
+                throw new DivisionByZeroException("Деление на ноль недопустимо");
             }
             System.out.println("Результат деления: " + (num1/num2));
 
-        } catch (InvalidNumberException e) {
+        } catch (DivisionByZeroException e) {
             System.out.println(e.getMessage());
         }
         scanner.close();
